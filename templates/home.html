@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>Welcome to NGO CRM System</h2>
+    <p>Manage your NGO operations efficiently with our comprehensive CRM solution.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+        <div class="card" style="text-align: center;">
+            <h3>👥 Donors</h3>
+            <p>Manage donor information and track donations</p>
+            <a href="{% url 'donor_list' %}" class="btn">View Donors</a>
+        </div>
+        
+        <div class="card" style="text-align: center;">
+            <h3>📊 Projects</h3>
+            <p>Track and manage ongoing projects</p>
+            <a href="{% url 'project_list' %}" class="btn">View Projects</a>
+        </div>
+        
+        <div class="card" style="text-align: center;">
+            <h3>🤝 Volunteers</h3>
+            <p>Coordinate volunteer activities</p>
+            <a href="/admin/volunteers/" class="btn">Manage Volunteers</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

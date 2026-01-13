@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>Donor Management</h2>
+    <a href="/admin/donors/donor/add/" class="btn">Add New Donor</a>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Total Donations</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for donor in donors %}
+            <tr>
+                <td>{{ donor.name }}</td>
+                <td>{{ donor.get_donor_type_display }}</td>
+                <td>{{ donor.email }}</td>
+                <td>{{ donor.phone }}</td>
+                <td>{{ donor.donations.count }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="5">No donors found.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
