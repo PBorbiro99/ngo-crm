@@ -1,7 +1,7 @@
 # NGO Management System (CRM)
 
-**Student:** Stefaniga Sebastian  
-**Course:** Web Technologies - UVT  
+**Student:** Borbiro Paul-Marian  
+**Course:** Tehnologii Web - UVT  
 
 ## What it does
 Web-based CRM for NGOs to manage donors, projects, volunteers, and events.
